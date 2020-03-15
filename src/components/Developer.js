@@ -9,36 +9,36 @@ function Developer() {
                 <div className="devProf">
                     <img src="https://i1.wp.com/www.eoric.uenr.edu.gh/wp-content/uploads/2019/08/male-profile-blank.jpg?ssl=1" alt="" className="devPic" width="180"></img>
                     <div className="devName">
-                        <p>First Name</p>
-                        <p>60000000</p>
+                        <p>Jiraphat Lertpipitkul</p>
+                        <p>60010140</p>
                     </div>
                 </div>
                 <div className="devProf">
                     <img src="https://i1.wp.com/www.eoric.uenr.edu.gh/wp-content/uploads/2019/08/male-profile-blank.jpg?ssl=1" alt="" className="devPic" width="180"></img>
                     <div className="devName">
-                        <p>First Name</p>
-                        <p>60000000</p>
+                        <p>Jirayu Aowcharoen</p>
+                        <p>60010154</p>
                     </div>
                 </div>
                 <div className="devProf">
                     <img src="https://i1.wp.com/www.eoric.uenr.edu.gh/wp-content/uploads/2019/08/male-profile-blank.jpg?ssl=1" alt="" className="devPic" width="180"></img>
                     <div className="devName">
-                        <p>First Name</p>
-                        <p>60000000</p>
+                        <p>Pitawat Chaivutinun</p>
+                        <p>60010714</p>
                     </div>
                 </div>
                 <div className="devProf">
                     <img src="https://i1.wp.com/www.eoric.uenr.edu.gh/wp-content/uploads/2019/08/male-profile-blank.jpg?ssl=1" alt="" className="devPic" width="180"></img>
                     <div className="devName">
-                        <p>First Name</p>
-                        <p>60000000</p>
+                        <p>Sedsakol Kamolchote</p>
+                        <p>60011008</p>
                     </div>
                 </div>
                 <div className="devProf">
                     <img src="https://i1.wp.com/www.eoric.uenr.edu.gh/wp-content/uploads/2019/08/male-profile-blank.jpg?ssl=1" alt="" className="devPic" width="180"></img>
                     <div className="devName">
-                        <p>First Name</p>
-                        <p>60000000</p>
+                        <p>Soros Seingpairod</p>
+                        <p>60011121</p>
                     </div>
                 </div>
             </div>
