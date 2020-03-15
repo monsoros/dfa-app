@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Nav() {
@@ -6,11 +6,12 @@ function Nav() {
         <div className="navigationContainer">
             <nav>
                 <ul className="navBar">
-                    <Link to="/" className="link"><li>Home</li></Link>
-                    <Link to="/developers" className="link"><li>Developers</li></Link>
-                    <Link to="" className="link"><li>About</li></Link>
+                    <li><Link to="/" className="link">Home</Link></li>
+                    <li><Link to="/developers" className="link">Developers</Link></li>
+                    <li><Link to="" className="link">About</Link></li>
                 </ul>
             </nav>
+            <hr></hr>
         </div>
     )
 }
