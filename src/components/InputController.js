@@ -9,7 +9,7 @@ function InputController() {
             <div className="displayBar">
                 <div className="inputLabel">Input Language</div>
                 <div className="displayInput">{
-                    inputStack.length == 0 ? <i>Your input language display here</i> : inputStack 
+                    inputStack.length === 0 ? <i>Your input language display here</i> : inputStack 
                 }</div>
             </div>
             <div className="inputBar">

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Nav() {
@@ -7,11 +7,10 @@ function Nav() {
             <nav>
                 <ul className="navBar">
                     <li><Link to="/" className="link">Home</Link></li>
+                    <li><Link to="/docs" className="link">Docs</Link></li>
                     <li><Link to="/developers" className="link">Developers</Link></li>
-                    <li><Link to="" className="link">About</Link></li>
                 </ul>
             </nav>
-            <hr></hr>
         </div>
     )
 }
