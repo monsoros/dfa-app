@@ -1,8 +1,12 @@
 import React, {useState} from 'react';
 
 function InputController() {
-    let inputLang = ['A', 'B', 'C', 'D', 'E']
+    let inputLang = ['0', '1', '2', '3']
     let [inputStack, setStack] = useState([])
+
+    const addInput = (event) => {
+        setStack([...inputStack, event.target.value])
+    }
 
     return(
         <div className="inputControllerContainer">
@@ -14,11 +18,12 @@ function InputController() {
             </div>
             <div className="inputBar">
                 <ul>
-                    <li><button onClick={() => setStack(inputStack => [inputStack, inputLang[0]])}>Input A</button></li>
-                    <li><button onClick={() => setStack(inputStack => [inputStack, inputLang[1]])}>Input B</button></li>
-                    <li><button onClick={() => setStack(inputStack => [inputStack, inputLang[2]])}>Input C</button></li>
-                    <li><button onClick={() => setStack(inputStack => [inputStack, inputLang[3]])}>Input D</button></li>
-                    <li><button onClick={() => setStack(inputStack => [inputStack, inputLang[4]])}>Input E</button></li>
+                    {
+                        inputLang.map((item, index) => {
+                            return <li><button onClick={addInput} value={inputLang[index]}>{ inputLang[index] }</button></li>
+                        })
+                    }
+                    <li><button onClick={() => setStack(inputStack.filter((item, index) => index !== inputStack.length-1))}>Undo</button></li>
                     <li><button onClick={() => setStack(inputStack => [])}>Reset</button></li>
                 </ul>
             </div>
