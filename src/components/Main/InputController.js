@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 function InputController() {
     let inputLang = ['0', '1', '2', '3']
+    let password = []
     let [inputStack, setStack] = useState([])
 
     const addInput = (event) => {
@@ -15,7 +16,13 @@ function InputController() {
             <div className="displayBar">
                 <div className="inputLabel">Input Language</div>
                 <div className="displayInput">{
-                    inputStack.length === 0 ? <i>Your input language display here</i> : inputStack 
+                    inputStack.length === 0 ? <i>Your input language display here</i> : 
+                    <div>{
+                        inputStack.length <=3 ?
+                        inputStack
+                        :
+                        <i>Error</i>
+                    }</div>
                 }</div>
             </div>
             <div className="inputBar">
