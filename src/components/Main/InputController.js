@@ -7,6 +7,8 @@ function InputController() {
     const addInput = (event) => {
         setStack([...inputStack, event.target.value])
     }
+    const check =()=>{
+    }
 
     return(
         <div className="inputControllerContainer">

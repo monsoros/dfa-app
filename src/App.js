@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Nav from './components/Nav';
-import Developer from './components/Developer';
-import DFA from './components/DFA';
-import Docs from './components/Docs';
+import Nav from './components/Main/Nav';
+import Developer from './components/Developer/Developer';
+import DFA from './components/Main/DFA';
+import Docs from './components/Doc/Docs';
 import './App.css';
 
 function App() {
