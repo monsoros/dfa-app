@@ -2,7 +2,7 @@ import React from 'react';
 
 function Docs() {
     return(
-        <div>
+        <div className="docsContainer">
             <h1>Document</h1>
         </div>
     )
