@@ -188,6 +188,42 @@
 
 /* Docs Component */
 
+/* Safe Component */
+.animateContainer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.passwordContainer {
+  text-align: center;
+  width: 80%;
+  margin: 10px auto 10px auto;
+  background-color: rgb(255, 171, 92);
+  border: 3px solid rgb(255, 152, 34);
+  border-radius: 5px;
+}
+
+.pwLabel {
+  font-weight: bolder;
+  margin-top: 5px;
+  color: white;
+}
+
+.pwNumContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.pwNum {
+  width: 50px;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 10px 5px 10px 5px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 @media screen and (min-width: 801px) and (max-width: 1136px) {
   /* Developer Component */

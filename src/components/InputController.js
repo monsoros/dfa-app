@@ -1,10 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
-function InputController() {
+function InputController(props) {
     let inputLang = ['0', '1', '2', '3']
     let [inputStack, setStack] = useState([])
 
-    const addInput = (event) => {
+    useEffect(() => {
+        props.updateChange(inputStack)
+    })
+
+    const updateInput = (event) => {
         setStack([...inputStack, event.target.value])
     }
 
@@ -20,7 +24,7 @@ function InputController() {
                 <ul>
                     {
                         inputLang.map((item, index) => {
-                            return <li><button onClick={addInput} value={inputLang[index]}>{ inputLang[index] }</button></li>
+                            return <li><button onClick={updateInput} value={inputLang[index]}>{ inputLang[index] }</button></li>
                         })
                     }
                     <li><button onClick={() => setStack(inputStack.filter((item, index) => index !== inputStack.length-1))}>Undo</button></li>
