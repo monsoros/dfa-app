@@ -1,24 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import GifPlayer from 'react-gif-player';
 
 function Safe(props) {
-    let [animate, setAnimate] = useState(props.shareValue)
+    let [animate, setAnimate] = useState("0")
 
     useEffect(() => {
         if(props.shareValue) {
-            console.log(props.shareValue)
+            changeAnimate()
         }
     })
+
+    const changeAnimate = () => {
+        let inputStr = props.shareValue
+        let pathNo = ""
+        if (inputStr.length === 0) {
+            pathNo = "0"
+        } else if (inputStr.length === 1) {
+            pathNo = "0" + inputStr[inputStr.length-1]
+        } else {
+            pathNo = inputStr[inputStr.length-2] + inputStr[inputStr.length-1]
+        }
+        setAnimate(pathNo)
+    }
 
     return (
         <div className="safeContainer">
             <div className="animateContainer">
-                <GifPlayer 
-                    gif={require("../public/safe_animation/01.gif")}
-                    autoplay={true}
-                    onTogglePlay={false}
-                    width={300} 
-                />
+                <img width={300} src={require("../public/safe_animation/" + animate + ".gif")} alt="safe"></img>
             </div>
             <div className="passwordContainer">
                 <div className="pwLabel">PASSWORD</div>

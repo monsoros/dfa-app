@@ -28,7 +28,7 @@ function InputController(props) {
                         })
                     }
                     <li><button onClick={() => setStack(inputStack.filter((item, index) => index !== inputStack.length-1))}>Undo</button></li>
-                    <li><button onClick={() => setStack(inputStack => [])}>Reset</button></li>
+                    <li><button onClick={() => setStack(inputStack => [])}>Start Over</button></li>
                 </ul>
             </div>
         </div>
