@@ -24,6 +24,9 @@ function DFA() {
             <div className="inputContainer">
                 <InputController shareValue={ shareState } updateChange={ updateChange }  />
             </div>
+            <div className="tipContainer">
+                Tips!
+            </div>
         </div>
     )
 }

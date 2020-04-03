@@ -24,11 +24,20 @@ function InputController(props) {
                 <ul>
                     {
                         inputLang.map((item, index) => {
-                            return <li><button onClick={updateInput} value={inputLang[index]}>{ inputLang[index] }</button></li>
+                            return <li><button className="inputButt" onClick={updateInput} value={inputLang[index]}>{ inputLang[index] }</button></li>
                         })
                     }
-                    <li><button onClick={() => setStack(inputStack.filter((item, index) => index !== inputStack.length-1))}>Undo</button></li>
-                    <li><button onClick={() => setStack(inputStack => [])}>Start Over</button></li>
+                    <li>
+                        <button className="undoButt" onClick={() => setStack(inputStack.filter((item, index) => index !== inputStack.length-1))}>
+                            <img width={20} src={require("../public/icon/undo.png")} alt="undo"></img>
+                        </button>
+                    </li>
+                    <li>
+                        <button className="reButt" onClick={() => setStack(inputStack => [])}>
+                            <img width={20} src={require("../public/icon/restart.png")} alt="restart"></img>
+                            <div className="labelRe">Restart</div>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
