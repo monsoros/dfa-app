@@ -33,12 +33,12 @@ function InputController(props) {
                     }
                     <li>
                         <button className="undoButt" onClick={() => setStack(inputStack.filter((item, index) => index !== inputStack.length-1))}>
-                            <img width={20} src={require("../public/icon/undo.png")} alt="undo"></img>
+                            <img width={20} src={require("../../public/icon/undo.png")} alt="undo"></img>
                         </button>
                     </li>
                     <li>
                         <button className="reButt" onClick={() => setStack(inputStack => [])}>
-                            <img width={20} src={require("../public/icon/restart.png")} alt="restart"></img>
+                            <img width={20} src={require("../../public/icon/restart.png")} alt="restart"></img>
                             <div className="labelRe">Restart</div>
                         </button>
                     </li>

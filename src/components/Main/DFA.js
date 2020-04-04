@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InputController from './InputController';
-import Safe from './Safe';
+import Safe from './Safe.js';
 import State from './State'
 
 function DFA() {

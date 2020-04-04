@@ -25,7 +25,7 @@ function Safe(props) {
     return (
         <div className="safeContainer">
             <div className="animateContainer">
-                <img width={300} src={require("../public/safe_animation/" + animate + ".gif")} alt="safe"></img>
+                <img width={300} src={require("../../public/safe_animation/" + animate + ".gif")} alt="safe"></img>
             </div>
             <div className="passwordContainer">
                 <div className="pwLabel">PASSWORD</div>
