@@ -17,12 +17,7 @@ function InputController() {
                 <div className="inputLabel">Input Language</div>
                 <div className="displayInput">{
                     inputStack.length === 0 ? <i>Your input language display here</i> : 
-                    <div>{
-                        inputStack.length <=3 ?
                         inputStack
-                        :
-                        <i>Error</i>
-                    }</div>
                 }</div>
             </div>
             <div className="inputBar">
