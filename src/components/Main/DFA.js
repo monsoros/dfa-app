@@ -1,24 +1,31 @@
-import React from 'react';
-import { Player } from 'video-react';
+import React, { useState } from 'react';
 import InputController from './InputController';
-import ImgContainer from './ImgContainer';
-import StateContainer from './StateContainer';
+import Safe from './Safe';
+import State from './State'
 
 function DFA() {
+    let [shareState, setShareState] = useState([])
+
+    const updateChange = (shareValue) => {
+        setShareState(shareValue)
+    }
+
     return(
         <div className="dfaContainer">
             <div className="dfaTitleContainer">
                 <div className="dfaTitle">DFA Something</div>
             </div>
             <div className="imgContainer">
-                <ImgContainer/>
+                <Safe shareValue={ shareState } />
             </div>
             <div className="stateContainer">
-            <StateContainer/>
-                State Container
+                <State shareValue={ shareState } />
             </div>
             <div className="inputContainer">
-                <InputController />
+                <InputController shareValue={ shareState } updateChange={ updateChange }  />
+            </div>
+            <div className="tipContainer">
+                Tips!
             </div>
         </div>
     )
