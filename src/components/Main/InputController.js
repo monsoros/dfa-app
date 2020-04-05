@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 
 function InputController(props) {
     let inputLang = ['0', '1', '2', '3']
-    let password = []
     let [inputStack, setStack] = useState([])
 
     useEffect(() => {
@@ -12,9 +11,7 @@ function InputController(props) {
     const updateInput = (event) => {
         setStack([...inputStack, event.target.value])
     }
-    const check =()=>{
-    }
-
+ 
     return(
         <div className="inputControllerContainer">
             <div className="displayBar">

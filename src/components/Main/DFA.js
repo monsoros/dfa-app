@@ -8,7 +8,28 @@ function DFA() {
 
     const updateChange = (shareValue) => {
         setShareState(shareValue)
+        if(shareValue[shareValue.length -1]===password[0]){
+            check[0]="green"
+        }
+        if(shareValue.length>1){
+            console.log(shareValue)
+            if(shareValue[shareValue.length -2]===password[0]&&shareValue[shareValue.length-1]===password[1]){
+                check[0]="green"
+                check[1]="green"
+            }
+        }
+        if(shareValue.length>2){
+            if(shareValue[shareValue.length -3]===password[0]&&shareValue[shareValue.length-2]===password[1]&&shareValue[shareValue.length-1]===password[2]){
+                check[0]="green"
+                check[1]="green"
+                check[2]="green"
+            }
+        }
+        
     }
+    var password=["0","1","2"]
+    var check=["white","white","white"]
+    
 
     return(
         <div className="dfaContainer">
@@ -16,7 +37,7 @@ function DFA() {
                 <div className="dfaTitle">DFA Something</div>
             </div>
             <div className="imgContainer">
-                <Safe shareValue={ shareState } />
+                <Safe shareValue={ shareState } password={password} check={check}/>
             </div>
             <div className="stateContainer">
                 <State shareValue={ shareState } />
