@@ -33,11 +33,12 @@ function DFA() {
                 check[2]="green"
                 if(shareValue[shareValue.length -1]==="1"||shareValue[shareValue.length -1]==="2"||shareValue[shareValue.length -1]==="3"){
                     setpassword([password[0],password[1],password[2],"0"])
+                    shareValue[shareValue.length -1]="9"
+                    shareValue[shareValue.length -2]="9"
                 }
                 if(shareValue[shareValue.length -1]==="0"){
                     setpassword([password[0],password[1],password[2],"1"])
-                    shareValue[shareValue.length -1]="9"
-                    shareValue[shareValue.length -2]="9"
+
                 }
             }
         }
