@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 function InputController(props) {
     let inputLang = ['0', '1', '2', '3']
     let [inputStack, setStack] = useState([])
+    const updateChange = useRef(props.updateChange)
 
     useEffect(() => {
-        props.updateChange(inputStack)
-    })
+        updateChange.current(inputStack)
+    }, [inputStack])
 
     const updateInput = (event) => {
         setStack([...inputStack, event.target.value])

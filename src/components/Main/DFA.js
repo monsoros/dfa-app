@@ -8,12 +8,11 @@ function DFA() {
     let [password, setpassword] = useState(["0","1","2","0"])
 
     const updateChange = (shareValue) => {
-        
+        console.log(shareValue[shareValue.length -1], password[0])
         if(shareValue[shareValue.length -1]===password[0]){
             check[0]="green"
         }
         if(shareValue.length>1){
-            console.log(shareValue)
             if(shareValue[shareValue.length -2]===password[0]&&shareValue[shareValue.length-1]===password[1]){
                 check[0]="green"
                 check[1]="green"
@@ -43,7 +42,6 @@ function DFA() {
             }
         }
         setShareState(shareValue)
-        
     }
     var check=["white","white","white"]
     
