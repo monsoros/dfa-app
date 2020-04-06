@@ -1,66 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import InputController from './InputController';
 import Safe from './Safe.js';
 import State from './State'
 
 function DFA() {
     let [shareState, setShareState] = useState([])
-    let [mode, setMode] = useState(0)
+    //let [mode, setMode] = useState(0)
     let [password, setpassword] = useState(["0", "1", "2"])
     let [check, setCheck] = useState(["white", "white", "white"])
-
+    let mode = useRef(0)
+    
     const updateChange = (shareValue) => {
-        
-        if (mode === 0) {
+        if (mode.current === 0) {
             if (shareValue[shareValue.length - 1] === password[0]) {
                 setCheck(["green", "white", "white"])
             }
-            else if (shareValue.length > 1) {
-                if (shareValue[shareValue.length - 2] === password[0] && shareValue[shareValue.length - 1] === password[1]) {
-                    setCheck(["green", "green", "white"])
-                }
-                if (shareValue.length > 2) {
-                    if (shareValue[shareValue.length - 3] === password[0] && shareValue[shareValue.length - 2] === password[1] && shareValue[shareValue.length - 1] === password[2]) {
-                        setCheck(["green", "green", "green"])
-                        setMode(1)
-                        console.log(mode)
-                    }
-                    else if (shareValue[shareValue.length - 2] === password[0] && shareValue[shareValue.length - 1] === password[1]) {
-                        setCheck(["green", "green", "white"])
-                    }
-                    else {
-                        setCheck(["white", "white", "white"])
-                    }
-                }
-                else {
-                    setCheck(["white", "white", "white"])
-                }
+            else if (shareValue.length > 1 && shareValue[shareValue.length - 2] === password[0] && shareValue[shareValue.length - 1] === password[1]) {
+                setCheck(["green", "green", "white"])
             }
-
-
+            else if (shareValue.length > 2 && shareValue[shareValue.length - 3] === password[0] && shareValue[shareValue.length - 2] === password[1] && shareValue[shareValue.length - 1] === password[2]) {
+                setCheck(["green", "green", "green"])
+                mode.current = 1
+            }
+            else if (shareValue.length > 2 && shareValue[shareValue.length - 2] === password[0] && shareValue[shareValue.length - 1] === password[1]) {
+                setCheck(["green", "green", "white"])
+            }
+            else {
+                setCheck(["white", "white", "white"])
+            }
             setShareState(shareValue)
         }
-        else if (mode === 1) {
+        else if (mode.current === 1) {
+            alert('Mode 1')
             setCheck(["green", "green","green"])
 
             if (shareValue[shareValue.length - 1] === "1" || shareValue[shareValue.length - 1] === "2" || shareValue[shareValue.length - 1] === "3") {
-                setMode(6)
+                mode.current = 6
                 shareValue[shareValue.length - 1] = "9"
                 shareValue[shareValue.length - 2] = "9"
             }
             if (shareValue[shareValue.length - 1] === "0") {
-                setMode(2)
+                mode.current = 2
             }
             setShareState(shareValue)
 
         }
-        else if (mode === 6) {
+        else if (mode.current === 6) {
             setCheck(["green", "green", "green"])
         }
         else {
-            setMode(mode + 1)
-            if (mode === 5) {
-                setMode(0)
+            mode.current++
+            if (mode.current === 5) {
+                mode.current = 0
                 setpassword([shareValue[shareValue.length - 3], shareValue[shareValue.length - 2], shareValue[shareValue.length - 1]])
             }
             setCheck(["white", "white", "white"])
