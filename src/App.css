@@ -8,6 +8,7 @@
 
 .App {
   background-image: url(./public/background/background.png);
+  
 }
 
 /* App Component */
@@ -38,6 +39,10 @@
   margin: 0 5px 0 5px;
 }
 
+.navBar li:first-child {
+  margin-right: auto;
+}
+
 .link{
   color: rgb(231, 231, 231);
   text-decoration: none;
@@ -61,6 +66,7 @@
 .devContainer {
   margin: 0 auto 0 auto;
   text-align: center;
+  background-color: white;
 }
 
 .devContainer h1 {
@@ -197,6 +203,10 @@
   padding: 5px;
 }
 
+/*.inputBar ul li:nth-child(-n+4) {
+  align-self: center;
+}*/
+
 .inputButt {
   border-radius: 4px;
   color: white;
@@ -208,6 +218,7 @@
   width: 30px;
   text-align: center;
   transition: all 0.1 ease 0.1;
+  align-self: center;
 }
 
 .inputButt:hover {
