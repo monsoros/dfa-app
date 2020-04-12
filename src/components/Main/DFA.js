@@ -22,7 +22,7 @@ function DFA() {
                 if (shareValue.length > 2) {
                     if (shareValue[shareValue.length - 3] === password[0] && shareValue[shareValue.length - 2] === password[1] && shareValue[shareValue.length - 1] === password[2]) {
                         setCheck(["green", "green", "green"])
-                        setMode(1)
+                        setMode(mode+1)
                         console.log(mode)
                     }
                     else if (shareValue[shareValue.length - 2] === password[0] && shareValue[shareValue.length - 1] === password[1]) {
