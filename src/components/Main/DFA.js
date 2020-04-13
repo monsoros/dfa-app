@@ -61,9 +61,9 @@ function DFA() {
 
     return (
         <div className="dfaContainer">
-            <div className="dfaTitleContainer">
+            {/*<div className="dfaTitleContainer">
                 <div className="dfaTitle">Safe - Deterministic Finite Automata</div>
-            </div>
+            </div>*/}
             <div className="imgContainer">
                 <Safe shareValue={shareState} password={password} check={check} />
             </div>

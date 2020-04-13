@@ -9,8 +9,8 @@ function State(props) {
     })
 
     return (
-        <div>
-            This is state component...
+        <div className="stateDivContainer">
+            <img className="stateIMG" src={require("../../public/state/TestState.jpg")} alt="state"></img>
         </div>
     )
 }
