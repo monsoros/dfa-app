@@ -3,14 +3,18 @@ import React, {useState, useEffect, useRef} from 'react';
 function InputController(props) {
     let inputLang = ['0', '1', '2', '3']
     let [inputStack, setStack] = useState([])
+    let [type, setType] = useState()
     const updateChange = useRef(props.updateChange)
+    const updatePressType = useRef(props.updatePressType)
 
     useEffect(() => {
         updateChange.current(inputStack)
-    }, [inputStack])
+        updatePressType.current(type)
+    }, [inputStack, type])
 
     const updateInput = (event) => {
         setStack([...inputStack, event.target.value])
+        setType(0)
     }
  
     return(
@@ -30,12 +34,12 @@ function InputController(props) {
                         })
                     }
                     <li>
-                        <button className="undoButt" onClick={() => setStack(inputStack.filter((item, index) => index !== inputStack.length-1))}>
+                        <button className="undoButt" onClick={() => {setStack(inputStack.filter((item, index) => index !== inputStack.length-1)); setType(1)}}>
                             <img width={20} src={require("../../public/icon/undo.png")} alt="undo"></img>
                         </button>
                     </li>
                     <li>
-                        <button className="reButt" onClick={() => setStack(inputStack => [])}>
+                        <button className="reButt" onClick={() => {setStack(inputStack => []); setType(2) }}>
                             <img width={20} src={require("../../public/icon/restart.png")} alt="restart"></img>
                             <div className="labelRe">Restart</div>
                         </button>

@@ -1,14 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import InputController from './InputController';
 import Safe from './Safe.js';
 import State from './State'
 
 function DFA() {
-    let [shareState, setShareState] = useState([])
-    //let [mode, setMode] = useState(0)
-    let [password, setpassword] = useState(["0", "1", "2"])
-    let [check, setCheck] = useState(["white", "white", "white"])
-    let mode = useRef(0)
+    const [shareState, setShareState] = useState([])
+    const [password, setPassword] = useState(["0", "1", "2"])
+    const [check, setCheck] = useState(["white", "white", "white"])
+    const mode = useRef(0)
+
+    const updatePassword = (newVal) => setPassword(newVal)
+
+    const pressType = useRef()
+    const updatePressType = (type) => pressType.current = type
+    /* 0 = Only Input
+       1 = Undo
+       2 = Reset */
+
+    // To see if its input, undo or reset
+    useEffect(() => {
+        console.log(pressType.current)
+    })
 
     const updateChange = (shareValue) => {
         if (mode.current === 0) {
@@ -84,7 +96,8 @@ function DFA() {
             mode.current++
             if (mode.current === 10) {
                 mode.current = 0
-                setpassword([shareValue[shareValue.length - 3], shareValue[shareValue.length - 2], shareValue[shareValue.length - 1]])
+                let newPassword = [shareValue[shareValue.length - 3], shareValue[shareValue.length - 2], shareValue[shareValue.length - 1]]
+                updatePassword(newPassword)
             }
             setCheck(["white", "white", "white"])
         }
@@ -103,7 +116,7 @@ function DFA() {
                 <State shareValue={shareState} />
             </div>
             <div className="inputContainer">
-                <InputController shareValue={shareState} updateChange={updateChange} />
+                <InputController shareValue={shareState} updateChange={updateChange} updatePressType={updatePressType} />
             </div>
             <div className="tipContainer">
                 Tips!
