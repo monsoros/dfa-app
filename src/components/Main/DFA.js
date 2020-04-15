@@ -19,7 +19,7 @@ function DFA() {
 
     // To see if its input, undo or reset
     useEffect(() => {
-        console.log(pressType.current)
+        console.log(password)
     })
 
     const updateChange = (shareValue) => {
