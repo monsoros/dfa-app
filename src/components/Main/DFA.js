@@ -19,10 +19,11 @@ function DFA() {
 
     // To see if its input, undo or reset
     useEffect(() => {
-        console.log(password)
+        console.log('--------')
     })
 
     const updateChange = (shareValue) => {
+        console.log(password)
         if (mode.current === 0) {
             if (mode.current === 0 && shareValue.length > 0) {
                 if (shareValue[shareValue.length - 1] === password[0]) {
