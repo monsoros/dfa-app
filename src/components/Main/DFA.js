@@ -39,7 +39,9 @@ function DFA() {
                         setCheck(["red", "white", "white"])
                         mode.current = 4
                     }
+                    
                 }
+                setShareState(shareValue)
             }
             else if (mode.current === 1) {
                 if (shareValue.length > 1 && shareValue[shareValue.length - 2] === password.current[0] && shareValue[shareValue.length - 1] === password.current[1]) {
@@ -50,6 +52,7 @@ function DFA() {
                     setCheck(["red", "white", "white"])
                     mode.current = 4
                 }
+                setShareState(shareValue)
             }
             else if (mode.current === 2) {
                 if (shareValue.length > 2 && shareValue[shareValue.length - 3] === password.current[0] && shareValue[shareValue.length - 2] === password.current[1] && shareValue[shareValue.length - 1] === password.current[2]) {
@@ -60,6 +63,7 @@ function DFA() {
                     setCheck(["red", "white", "white"])
                     mode.current = 4
                 }
+                setShareState(shareValue)
             }
             else if (mode.current === 3) {
                 if (shareValue[shareValue.length - 1] === "1" || shareValue[shareValue.length - 1] === "2" || shareValue[shareValue.length - 1] === "3") {
@@ -70,6 +74,7 @@ function DFA() {
                 else if (shareValue[shareValue.length - 1] === "0") {
                     mode.current = 7
                 }
+                setShareState(shareValue)
             }
             else if (mode.current === 4) {
                 if (shareValue[shareValue.length - 1] === password.current[0]) {
@@ -80,6 +85,7 @@ function DFA() {
                     setCheck(["red", "red", "white"])
                     mode.current = 5
                 }
+                setShareState(shareValue)
             }
             else if (mode.current === 5) {
 
@@ -90,10 +96,13 @@ function DFA() {
                 else {
                     setCheck(["red", "red", "red"])
                     mode.current = 6
+                    
                 }
+                setShareState(shareValue)
             }
             else if (mode.current === 6) {
                 setCheck(["red", "red", "red"])
+                setShareState(shareValue)
             }
             else if (mode.current === 99) {
                 setCheck(["green", "green", "green"])
@@ -107,8 +116,9 @@ function DFA() {
                     password.current = newPassword
                 }
                 setCheck(["white", "white", "white"])
+                setShareState(shareValue)
             }
-            setShareState(shareValue)
+            
         }
     }
 
