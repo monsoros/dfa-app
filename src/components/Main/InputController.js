@@ -34,7 +34,7 @@ function InputController(props) {
                         })
                     }
                     <li>
-                        <button className="reButt" onClick={() => {setStack(inputStack => []); setType(2) }}>
+                        <button id="resetButton" className="reButt" onClick={() => {setStack(inputStack => []); setType(2) }}>
                             <img width={20} src={require("../../public/icon/restart.png")} alt="restart"></img>
                             <div className="labelRe">Restart</div>
                         </button>

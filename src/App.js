@@ -5,6 +5,7 @@ import Developer from './components/Developer/Developer';
 import DFA from './components/Main/DFA';
 import Docs from './components/Doc/Docs';
 import './App.css';
+import ReactNotifications from 'react-notifications-component';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Nav />
       </header>
       <div className="main">
+        <ReactNotifications />
         <Route exact path="/" component={DFA}></Route>
         <Route path="/docs" component={Docs}></Route>
         <Route path="/developers" component={Developer}></Route>

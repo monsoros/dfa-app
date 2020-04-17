@@ -40,7 +40,7 @@ function State(props) {
 
     return (
         <div className="stateDivContainer">
-            <img className="stateIMG" src={require("../../public/state/"+props.password[0]+props.password[1]+props.password[2]+"/"+props.mode+".jpg")} ></img>
+            <img className="stateIMG" src={require("../../public/state/"+props.password[0]+props.password[1]+props.password[2]+"/"+props.mode+".jpg")} alt="state"></img>
         </div>
     )
 }
