@@ -145,7 +145,7 @@ function DFA() {
                 <InputController shareValue={shareState} updateChange={updateChange} updatePressType={updatePressType} />
             </div>
             <div className="tipContainer">
-                Tips!
+                <div>DFA vault is the responsive website simulate the vault by using DFA model as password detection. The objective is to applied DFA in real-world problems and to make we can look at the whole picture of DFA more clearly.</div>
             </div>
         </div>
     )

@@ -4,6 +4,7 @@ import Nav from './components/Main/Nav';
 import Developer from './components/Developer/Developer';
 import DFA from './components/Main/DFA';
 import Docs from './components/Doc/Docs';
+import Footer from './components/Main/Footer';
 import './App.css';
 import ReactNotifications from 'react-notifications-component';
 
@@ -19,6 +20,9 @@ function App() {
         <Route path="/docs" component={Docs}></Route>
         <Route path="/developers" component={Developer}></Route>
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
