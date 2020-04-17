@@ -12,32 +12,37 @@ function Safe(props) {
     const changeAnimate = () => {
         let inputStr = props.shareValue
         let pathNo = ""
-        if (inputStr.length === 0) {
-            pathNo = "0"
-        } 
-        else if (inputStr.length === 1) {
-            pathNo = "0" + inputStr[inputStr.length - 1]
-        } 
-        else if (inputStr.length === 2) {
-            pathNo = inputStr[inputStr.length - 2] + inputStr[inputStr.length - 1];
+        if (props.mode === 99) {
+            setAnimate("99");
         } 
         else {
-            if (inputStr[inputStr.length - 1] === inputStr[inputStr.length - 2] && inputStr[inputStr.length - 2] === inputStr[inputStr.length - 3]) {
-                if (inputStr.length %2===1) { 
-                    pathNo = inputStr[inputStr.length - 2] + inputStr[inputStr.length - 1];  
-                }
-                else{
-                    pathNo = inputStr[inputStr.length - 2] + inputStr[inputStr.length - 1];
-                    pathNo = pathNo+"_2";
-                }
-
+            if (inputStr.length === 0) {
+                pathNo = "0"
             }
-            else{
+            else if (inputStr.length === 1) {
+                pathNo = "0" + inputStr[inputStr.length - 1]
+            }
+            else if (inputStr.length === 2) {
                 pathNo = inputStr[inputStr.length - 2] + inputStr[inputStr.length - 1];
             }
-        }
+            else {
+                if (inputStr[inputStr.length - 1] === inputStr[inputStr.length - 2] && inputStr[inputStr.length - 2] === inputStr[inputStr.length - 3]) {
+                    if (inputStr.length % 2 === 1) {
+                        pathNo = inputStr[inputStr.length - 2] + inputStr[inputStr.length - 1];
+                    }
+                    else {
+                        pathNo = inputStr[inputStr.length - 2] + inputStr[inputStr.length - 1];
+                        pathNo = pathNo + "_2";
+                    }
 
-        setAnimate(pathNo);
+                }
+                else {
+                    pathNo = inputStr[inputStr.length - 2] + inputStr[inputStr.length - 1];
+                }
+            }
+
+            setAnimate(pathNo);
+        }
 
     }
 

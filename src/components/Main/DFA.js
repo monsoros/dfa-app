@@ -133,11 +133,10 @@ function DFA() {
             setShareState(shareValue)
         }
     }
-
     return (
         <div className="dfaContainer">
             <div className="imgContainer">
-                <Safe shareValue={shareState} password={password.current} check={check} />
+                <Safe shareValue={shareState} password={password.current} check={check} mode={mode.current}/>
             </div>
             <div className="stateContainer">
                 <State shareValue={shareState} password={password.current} mode={mode.current} />
