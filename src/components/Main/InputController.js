@@ -30,7 +30,7 @@ function InputController(props) {
                 <ul>
                     {
                         inputLang.map((item, index) => {
-                            return <li><button className="inputButt" onClick={updateInput} value={inputLang[index]}>{ inputLang[index] }</button></li>
+                            return <li key={index}><button className="inputButt" onClick={updateInput} value={inputLang[index]}>{ inputLang[index] }</button></li>
                         })
                     }
                     <li>
