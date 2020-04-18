@@ -11,7 +11,7 @@ function Docs() {
                 <div class="gridItem">
                     <p class="headText">TooSafe คืออะไร?</p>
                     <p class="detailText">
-                        TooSafe คือ Responsive Website ที่จำลองการทำงานของตู้นิรภัยแบบหมุน 4 ตัวเลขโดยใช้ Deterministic Finite Automata (DFA) มาทำการอธิบายการทำงานของตู้นิรภัย
+                        TooSafe คือ Responsive Website ที่จำลองการทำงานของตู้นิรภัยแบบหมุน 4 ตัวเลข (0,1,2,3) โดยใช้ Deterministic Finite Automata (DFA) มาทำการอธิบายการทำงานของตู้นิรภัย
                     </p>
                 </div>
 
