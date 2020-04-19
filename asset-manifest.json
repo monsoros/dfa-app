@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/toosafe/static/css/main.7aaf2bca.chunk.css",
-    "main.js": "/toosafe/static/js/main.c0d25cd4.chunk.js",
-    "main.js.map": "/toosafe/static/js/main.c0d25cd4.chunk.js.map",
+    "main.js": "/toosafe/static/js/main.f6aad6a6.chunk.js",
+    "main.js.map": "/toosafe/static/js/main.f6aad6a6.chunk.js.map",
     "runtime-main.js": "/toosafe/static/js/runtime-main.53846090.js",
     "runtime-main.js.map": "/toosafe/static/js/runtime-main.53846090.js.map",
     "static/css/2.adef9f42.chunk.css": "/toosafe/static/css/2.adef9f42.chunk.css",
     "static/js/2.5150bbea.chunk.js": "/toosafe/static/js/2.5150bbea.chunk.js",
     "static/js/2.5150bbea.chunk.js.map": "/toosafe/static/js/2.5150bbea.chunk.js.map",
     "index.html": "/toosafe/index.html",
-    "precache-manifest.a780c9938ea96f06bbbd126805073ba1.js": "/toosafe/precache-manifest.a780c9938ea96f06bbbd126805073ba1.js",
+    "precache-manifest.5e2988205d3d6d11245632538f5e1417.js": "/toosafe/precache-manifest.5e2988205d3d6d11245632538f5e1417.js",
     "service-worker.js": "/toosafe/service-worker.js",
     "static/css/2.adef9f42.chunk.css.map": "/toosafe/static/css/2.adef9f42.chunk.css.map",
     "static/css/main.7aaf2bca.chunk.css.map": "/toosafe/static/css/main.7aaf2bca.chunk.css.map",
@@ -67,6 +67,6 @@
     "static/css/2.adef9f42.chunk.css",
     "static/js/2.5150bbea.chunk.js",
     "static/css/main.7aaf2bca.chunk.css",
-    "static/js/main.c0d25cd4.chunk.js"
+    "static/js/main.f6aad6a6.chunk.js"
   ]
 }

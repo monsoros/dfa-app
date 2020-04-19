@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "528eff7472cfbe5ef2fc4b9c0e845f43",
+    "revision": "6597705d8506e8b3cd96747fb642dd89",
     "url": "/toosafe/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/toosafe/static/css/2.adef9f42.chunk.css"
   },
   {
-    "revision": "3f1af7a58d1713a7193d",
+    "revision": "287b23aebee2752eb48d",
     "url": "/toosafe/static/css/main.7aaf2bca.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/toosafe/static/js/2.5150bbea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3f1af7a58d1713a7193d",
-    "url": "/toosafe/static/js/main.c0d25cd4.chunk.js"
+    "revision": "287b23aebee2752eb48d",
+    "url": "/toosafe/static/js/main.f6aad6a6.chunk.js"
   },
   {
     "revision": "eaf55573b45a30d61d6f",
