@@ -8,7 +8,7 @@ function InputController(props) {
     const updatePressType = useRef(props.updatePressType)
 
     useEffect(() => {
-        updateChange.current(inputStack)
+        updateChange.current(inputStack, type)
         updatePressType.current(type)
     }, [inputStack, type])
 

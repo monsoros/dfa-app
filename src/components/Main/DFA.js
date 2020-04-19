@@ -23,7 +23,7 @@ function DFA() {
         }
     }, [pressType])
 
-    const updateChange = (shareValue) => {
+    const updateChange = (shareValue, ptype) => {
         if (mode.current === 0) {
             if (mode.current === 0 && shareValue.length > 0) {
                 if (shareValue[shareValue.length - 1] === password.current[0]) {
@@ -96,31 +96,35 @@ function DFA() {
         else if (mode.current === 6) {
             setCheck(["red", "red", "red"])
             setShareState(shareValue)
-            store.addNotification({
-                title: 'You are in trap state',
-                message: 'Click restart to start over',
-                type: 'warning',                         
-                container: 'top-right',                
-                animationIn: ["animated", "fadeIn"],     
-                animationOut: ["animated", "fadeOut"], 
-                dismiss: {
-                  duration: 5000 
-                }
-            })
+            if (ptype === 0) {
+                store.addNotification({
+                    title: 'You are in trap state.',
+                    message: 'Click restart to start over.',
+                    type: 'warning',                         
+                    container: 'top-right',                
+                    animationIn: ["animated", "fadeIn"],     
+                    animationOut: ["animated", "fadeOut"], 
+                    dismiss: {
+                      duration: 5000 
+                    }
+                })
+            }
         }
         else if (mode.current === 99) {
             setCheck(["green", "green", "green"])
-            store.addNotification({
-                title: 'You are in final state',
-                message: 'Click restart to start over',
-                type: 'default',                         
-                container: 'top-right',                
-                animationIn: ["animated", "fadeIn"],     
-                animationOut: ["animated", "fadeOut"],   
-                dismiss: {
-                  duration: 5000 
-                }
-            })
+            if (ptype === 0) {
+                store.addNotification({
+                    title: 'You are in final state.',
+                    message: 'Click restart to start over.',
+                    type: 'default',                         
+                    container: 'top-right',                
+                    animationIn: ["animated", "fadeIn"],     
+                    animationOut: ["animated", "fadeOut"],   
+                    dismiss: {
+                    duration: 5000 
+                    }
+                })
+            }
         }
         else {
             mode.current++
